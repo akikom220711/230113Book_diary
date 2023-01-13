@@ -1,0 +1,669 @@
+/*ここからテンプレート*/
+.header {
+  display: flex;
+  width: 770px;
+  height: 80px;
+  margin: 5px auto 0 auto;
+  background-color: rgb(107, 184, 84);
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+  justify-content: space-between;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 35px;
+  color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+
+.menu {
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  width: 770px;
+  height: 50px;
+  margin: 0 auto 5px auto;
+  background-color: rgb(107, 184, 84);
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  align-items: center;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/*ここからhome*/
+.calender_title {
+  display: flex;
+  width: 770px;
+  height: 80px;
+  margin: 0 auto 0 auto;
+  background-color: rgb(143, 211, 125);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calender_title_font {
+  display:inline-block;
+  font-size: 35px;
+  text-align: center;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+
+.calender_title_link {
+  display: inline-block;
+  font-size: 35px;
+  text-align: center;
+  align-items: center;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  color:black;
+  text-decoration: none;
+}
+
+.calender_table {
+  width: 770px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.calender_th {
+  height: 30px;
+  background-color: rgb(172, 226, 157);
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid rgb(221, 219, 219);
+}
+
+.calender_td {
+  width: 110px;
+  height: 112px;
+  border: 1px solid rgb(232, 233, 232);
+}
+
+.calender_days {
+  padding: 5px 50px 90px 5px;
+}
+
+.calender_days:hover {
+  background-color: rgba(206, 248, 206, 0.801);
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.trans {
+  opacity: 0.3;
+}
+
+.calender_ul {
+  position: relative;
+  margin-top:-80px;
+}
+
+.calender_list {
+  width: 110px;
+  height: 15px;
+  background-color: rgb(252, 222, 91);
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 7px;
+  overflow: hidden; 
+  list-style: none;
+}
+
+.calender_list_a {
+  color: black;
+  text-decoration: none;
+}
+
+/*ここからモーダルウィンドウ*/
+.modal_back {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(121, 119, 119, 0.5);
+}
+
+.modal_window {
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 7px solid rgb(252, 222, 91);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(90, 90, 90);
+  text-align: center;
+}
+
+.close{
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(190, 189, 189);
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  margin: 3px 3px 0 440px;
+}
+
+.modal_table {
+  margin: 10px auto;
+  text-align: left;
+}
+
+.modal_table_th {
+  width: 120px;
+  height: 60px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  vertical-align: top;
+}
+
+.modal_table_td {
+  width: 200px;
+  height: 60px;
+}
+
+.modal_table_td_big {
+  width: 200px;
+  height: 120px;
+}
+
+.modal_input {
+  width: 200px;
+  height: 25px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.modal_textarea {
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.modal_submit {
+  display: inline-block;
+  border: 3px solid rgb(252, 222, 91);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  margin: 10px auto;
+  padding: 2px 20px;
+}
+
+.modal_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+[v-cloak] {
+  display: none;
+}
+
+/*ここから会員登録ページ*/
+.regist_box{
+  width: 500px;
+  height: 400px;
+  margin: 30px auto;
+  text-align: center;
+  border: 5px solid rgb(107, 184, 84);
+  border-radius: 5px;
+}
+
+.regist_title {
+  font-size: 25px;
+  margin-top: 30px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+
+.regist_table {
+  margin: 30px auto 0 auto;
+}
+
+.regist_th {
+  width: 150px;
+  height: 80px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  text-align: left;
+}
+
+.regist_td {
+  width: 200px;
+  height: 80px;
+}
+
+.regist_input {
+  width: 200px;
+  height: 25px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.regist_submit {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+}
+
+.regist_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+.error {
+  font-size: 13px;
+  color: red;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  text-align: left;
+}
+
+/*ここからthanksページ*/
+.thanks_box{
+  width: 500px;
+  height: 300px;
+  margin: 100px auto;
+  text-align: center;
+  border: 5px solid rgb(107, 184, 84);
+  border-radius: 5px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+
+.thanks_text{
+  margin: 100px 0;
+  font-weight: bold;
+}
+
+.thanks_btn {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+}
+
+.thanks_btn:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+/*ここからログインページ*/
+.login_box {
+  width: 500px;
+  height: 400px;
+  margin: 30px auto;
+  text-align: center;
+  border: 5px solid rgb(107, 184, 84);
+  border-radius: 5px;
+}
+
+.login_title {
+  font-size: 25px;
+  margin-top: 50px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+
+.login_table {
+  margin: 30px auto 0 auto;
+}
+
+.login_th {
+  width: 150px;
+  height: 80px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  text-align: left;
+}
+
+.login_td {
+  width: 200px;
+  height: 80px;
+}
+
+.login_input {
+  width: 200px;
+  height: 25px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.login_submit {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+}
+
+.login_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+/*ここからshow_bookページ*/
+.show_table {
+  margin: 10px auto;
+  text-align: left;
+}
+
+.show_table_th {
+  width: 120px;
+  height: 60px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  vertical-align: top;
+  vertical-align: bottom;
+}
+
+.show_table_td {
+  width: 400px;
+  height: 60px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  border-bottom: 1px dotted rgb(201, 199, 199);
+  vertical-align: bottom;
+}
+
+.show_btn_box {
+  width: 770px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.show_btn {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+}
+
+.show_btn:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+/*ここからupdate_bookページ*/
+.update_box {
+  text-align: center;
+}
+
+.update_table {
+  margin: 30px auto 0 auto;
+}
+
+.update_th {
+  width: 150px;
+  height: 80px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  text-align: left;
+  vertical-align: top;
+}
+
+.update_td {
+  width: 200px;
+  height: 80px;
+  text-align: left;
+}
+
+.update_input {
+  width: 200px;
+  height: 25px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.update_textarea {
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.update_submit {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+  margin-bottom: 10px;
+}
+
+.update_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+/*ここから検索ページ*/
+.search_box {
+  width: 700px;
+  height: 50px;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search_keyword {
+  display: inline-block;
+  margin: 12px 20px;
+}
+
+.search_submit {
+  display: inline-block;
+  background-color: rgb(107, 184, 84);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+  margin: 12px 20px;
+}
+
+.search_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+.result_container {
+  width: 770px;
+  margin: 0 auto;
+}
+
+.result_box {
+  width: 700px;
+  height: 100px;
+  box-shadow: 1px 1px 3px rgb(90, 90, 90);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.result_img {
+  float: left;
+  width: 70px;
+  margin-left: 20px;
+}
+
+.result_div{
+  float: left;
+}
+
+.result_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 20px 30px;
+}
+
+.result_date {
+  margin: 10px 0 10px 30px;
+  clear: left;
+}
+
+.result_list_a {
+  color: black;
+}
+
+/*ここからページネーション*/
+.pagi_all {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagi_item {
+  display: inline-block;
+  padding: 0.5vw;
+  color: black;
+  font-size: 0.7vw;
+  font-weight: bold;
+  background-color: white;
+}
+
+.pagi_active {
+  display: inline-block;
+  padding: 0.5vw;
+  color: white;
+  font-size: 0.7vw;
+  font-weight: bold;
+  background-color: rgb(107, 184, 84);
+}
+
+.pagi_a {
+  color: black;
+  text-decoration: none;
+}
+
+/*ここからつんどくページ*/
+.unread_books_container {
+  width: 770px;
+  margin: 20px auto;
+}
+
+.unread_books_h1 {
+  display: inline-block;
+}
+
+.unread_books_add {
+  display: inline-block;
+  border: 3px solid rgb(252, 222, 91);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 5px 20px;
+}
+
+.unread_books_add:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+.unread_books_box {
+  width: 700px;
+  height: 100px;
+  box-shadow: 1px 1px 3px rgb(90, 90, 90);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.unread_books_img {
+  float: left;
+  width: 70px;
+  margin-left: 20px;
+}
+
+.unread_books_div {
+  float: left;
+  width: 500px;
+}
+
+.unread_books_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 20px 30px;
+}
+
+.unread_books_author {
+  margin: 10px 0 10px 30px;
+}
+
+.unread_books_delete {
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+  margin-top: 60px;
+}
+
+.unread_books_delete:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
+
+.unread_modal_window {
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 7px solid rgb(252, 222, 91);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(90, 90, 90);
+  text-align: center;
+}
+
+/*ここから設定ページ*/
+.setting_box {
+  width: 700px;
+  height: 500px;
+  margin: 30px auto;
+  text-align: left;
+  border: 5px solid rgb(107, 184, 84);
+  border-radius: 5px;
+}
+
+.setting_title {
+  font-size: 24px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  margin: 25px 0 0 80px;
+}
+
+.setting_detail {
+  font-size: 18px;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  margin: 50px 0 0 80px;
+}
+
+.setting_table {
+  margin: 25px 0 0 120px;
+}
+
+.setting_th{
+  width: 200px;
+  height: 50px;
+}
+
+.setting_submit {
+  display: inline-block;
+  border: 3px solid rgb(107, 184, 84);
+  border-radius: 3px;
+  background-color: white;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+  padding: 2px 20px;
+  margin-left: 500px;
+}
+
+.setting_submit:hover {
+  box-shadow: 1.5px 1.5px 1.5px rgb(90, 90, 90);
+}
