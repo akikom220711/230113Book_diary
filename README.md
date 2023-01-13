@@ -6,7 +6,7 @@
 - 簡便な読書記録作成できるアプリがあると便利であると思ったため。<br><br>
 
 ## アプリケーションURL
-https://github.com/akikom220711/221204rese_miyamoto.git<br><br>
+https://github.com/akikom220711/230113Book_diary<br><br>
 
 ## 使用技術（実行環境）
 - Windows 10
