@@ -26,7 +26,7 @@ https://github.com/akikom220711/230113Book_diary<br><br>
 
 3. mySQL（MariaDB）内に `bookdiary`という名前のデータベースを作成する。
 
-4. CLI でダウンロードしたディレクトリまで移動し、`composer install` を実行する。
+4. CLI でダウンロードしたディレクトリ内まで移動し、`composer install` を実行する。
 
 5. `.env.example` ファイルのファイル名を `.env` に書き換え、ファイル内の `APP_NAME` を `APP_NAME=bookdiary` に `DB_DATABASE` を `DB_DATABASE=bookdiary` に書き換える。
 
