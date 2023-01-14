@@ -18,23 +18,27 @@ https://github.com/akikom220711/230113Book_diary<br><br>
 <br><br>
 
 ## 環境構築
-1. git cloneでリポジトリをダウンロードする。
+1. `git clone` でリポジトリをダウンロードする。
 
-2. ダウンロードしたディレクトリをC:\xampp\htdocsに移動する。
+2. ダウンロードしたディレクトリを `C:\xampp\htdocs` に移動する。
 
-3. XAMPPのApacheとmySQLを起動する。
+3. XAMPP の Apache と mySQL を起動する。
 
-3. mySQL（MariaDB）内に「bookdiary」という名前のデータベースを作成する。
+3. mySQL（MariaDB）内に `bookdiary`という名前のデータベースを作成する。
 
-4. CLIでダウンロードしたディレクトリまで移動し、「php artisan migrate」を入力して実行する。
-(マイグレーション)
+4. CLI でダウンロードしたディレクトリまで移動し、`composer install` を実行する。
 
-5. テストデータを使用する場合には「php artisan db:seed」を入力して実行する。
-（シーディング）
+5. `.env.example` ファイルのファイル名を `.env` に書き換え、ファイル内の `APP_NAME` を `APP_NAME=bookdiary` に `DB_DATABASE` を `DB_DATABASE=bookdiary` に書き換える。
 
-6. 「php artisan serve」を入力し、Webサーバーを起動する。
+6. `php artisan key:generate` を入力して実行する。
 
-7. [http://127.0.0.1:8000/](http://127.0.0.1:8000/)にアクセスすることでアプリを実行することができる。
+7. `php artisan migrate` を入力して実行する。
+
+8. テストデータを使用する場合には `php artisan db:seed` を入力して実行する。
+
+9. `php artisan serve` を入力し、サーバーを起動する。
+
+10. [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすることでアプリを実行することができる。
 
 ### テスト用アカウント
 シーディングを行うと自動的に登録されるアカウント

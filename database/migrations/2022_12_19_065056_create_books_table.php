@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->string('title', 255)->nullable();
             $table->string('author', 255)->nullable();
             $table->string('publisher', 255)->nullable();
-            $table->year('published_year')->nullable();
+            $table->string('published_year', 255)->nullable();
             $table->string('comment', 2000)->nullable();
             $table->date('read_date');
             $table->string('url', 1000)->nullable();
