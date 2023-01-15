@@ -17,7 +17,7 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('category_id');
-            $table->string('title', 255)->nullable();
+            $table->string('title', 255);
             $table->string('author', 255)->nullable();
             $table->string('publisher', 255)->nullable();
             $table->string('published_year', 255)->nullable();

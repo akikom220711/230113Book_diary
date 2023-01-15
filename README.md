@@ -39,6 +39,7 @@ https://github.com/akikom220711/230113Book_diary<br><br>
 9. `php artisan serve` を入力し、サーバーを起動する。
 
 10. [http://127.0.0.1:8000/](http://127.0.0.1:8000/) にアクセスすることでアプリを実行することができる。
+<br><br>
 
 ### テスト用アカウント
 シーディングを行うと自動的に登録されるアカウント
@@ -83,22 +84,6 @@ https://github.com/akikom220711/230113Book_diary<br><br>
 ジャンルごとに色を変えてカレンダー上に読書記録を表示することができる。<br>
 ジャンルごとの色指定はメニューの「設定」から行うことができる。<br><br>
 
-## テーブル設計
-- users table<br>
-ユーザー登録用テーブル。<br>
-![users table image](/public/img_readme/users_table.gif)
-
-- books table<br>
-読了済み書籍登録用テーブル。<br>
-![books table image](/public/img_readme/books_table.gif)
-
-- unread books table<br>
-未読書籍登録用テーブル<br>
-![unread books table image](/public/img_readme/unread_books_table.gif)
-
-- category table<br>
-書籍ジャンル登録用テーブル<br>
-![categories table image](/public/img_readme/categories_table.gif)
 
 
 

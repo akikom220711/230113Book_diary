@@ -16,7 +16,7 @@ class CreateUnreadBooksTable extends Migration
         Schema::create('unread_books', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('title', 255)->nullable();
+            $table->string('title', 255);
             $table->string('author', 255)->nullable();
             $table->string('url', 1000)->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();

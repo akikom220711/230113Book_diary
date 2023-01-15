@@ -222,10 +222,11 @@ Book diary
 
     </table>
 
+
     <div v-show="isShow" v-on:click="closeModal" class="modal_back" v-cloak>
       <div class="modal_window" v-on:click="stopEvent">
         <span v-on:click="closeModal" class="close">×</span>
-        <form action="/registbook" method="post">
+        <form action="/registbook" v-on:submit="checkForm" method="post">
           @csrf
           <table class="modal_table">
             <tr>
@@ -237,28 +238,37 @@ Book diary
             <tr>
               <th class="modal_table_th">タイトル：</th>
               <td class="modal_table_td">
-                <input v-bind:value="title" class="modal_input" type="text" name="title">
+                <input v-model="title" class="modal_input" type="text" name="title">
+                <p class="error">@{{ errors[0] }}</p>
               </td>
             </tr>
             <tr>
               <th class="modal_table_th">著者名：</th>
               <td class="modal_table_td">
-                <input v-bind:value="author" class="modal_input" type="text" name="author">
+                <input v-model="author" class="modal_input" type="text" name="author">
+                <p class="error">@{{ errors[1] }}</p>
               </td>
             </tr>
             <tr>
               <th class="modal_table_th">出版社：</th>
-              <td class="modal_table_td"><input v-bind:value="publisher" class="modal_input" type="text" name="publisher"></td>
+              <td class="modal_table_td">
+                <input v-model="publisher" class="modal_input" type="text" name="publisher">
+                <p class="error">@{{ errors[2] }}</p>
+              </td>
             </tr>
             <tr>
               <th class="modal_table_th">出版年：</th>
               <td class="modal_table_td">
-                <input v-bind:value="year" class="modal_input" type="text" name="year">
+                <input v-model="year" class="modal_input" type="text" name="year">
+                <p class="error">@{{ errors[3] }}</p>
               </td>
             </tr>
             <tr>
               <th class="modal_table_th">感想：</th>
-              <td class="modal_table_td_big"><textarea v-bind:value="comment" class="modal_textarea" name="comment" cols="30" rows="5"></textarea></td>
+              <td class="modal_table_td_big">
+                <textarea v-model="comment" class="modal_textarea" name="comment" cols="30" rows="5"></textarea>
+                <p class="error">@{{ errors[4] }}</p>
+              </td>
             </tr>
             <tr>
               <th class="modal_table_th">ジャンル：</th>
@@ -275,6 +285,7 @@ Book diary
         </form>
       </div>
     </div>
+
 
   @else
         <table class="calender_table">

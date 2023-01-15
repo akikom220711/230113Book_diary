@@ -27,19 +27,21 @@ Book diary
   <div v-show="isShow" v-on:click="closeModal" class="modal_back" v-cloak>
     <div class="unread_modal_window" v-on:click="stopEvent">
       <span v-on:click="closeModal" class="close">×</span>
-      <form action="/createunreadbook" method="post">
+      <form action="/createunreadbook" v-on:submit="checkForm_unread" method="post">
         @csrf
         <table class="modal_table">
           <tr>
             <th class="modal_table_th">タイトル：</th>
             <td class="modal_table_td">
-              <input class="modal_input" type="text" name="unread_title">
+              <input v-model="unread_title" class="modal_input" type="text" name="unread_title">
+              <p class="error">@{{ errors[0] }}</p>
             </td>
           </tr>
           <tr>
             <th class="modal_table_th">著者名：</th>
             <td class="modal_table_td">
-              <input class="modal_input" type="text" name="unread_author">
+              <input v-model="unread_author" class="modal_input" type="text" name="unread_author">
+              <p class="error">@{{ errors[1] }}</p>
             </td>
           </tr>
         </table>

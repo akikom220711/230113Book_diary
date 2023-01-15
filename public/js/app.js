@@ -5394,6 +5394,8 @@ var app = new Vue({
     year: '',
     comment: '',
     category: 1,
+    unread_title: '',
+    unread_author: '',
     mystery_color: {
       backgroundColor: ''
     },
@@ -5408,7 +5410,8 @@ var app = new Vue({
     },
     others_color: {
       backgroundColor: ''
-    }
+    },
+    errors: []
   },
   methods: {
     openModal: function openModal() {
@@ -5422,6 +5425,9 @@ var app = new Vue({
       this.year = '';
       this.comment = '';
       this.category = 1;
+      this.unread_title = '';
+      this.unread_author = '';
+      this.errors = [];
     },
     stopEvent: function stopEvent() {
       event.stopPropagation();
@@ -5435,6 +5441,41 @@ var app = new Vue({
       this.SF_color.backgroundColor = setting.SF_color;
       this.nonfiction_color.backgroundColor = setting.nonfiction_color;
       this.others_color.backgroundColor = setting.others_color;
+    },
+    checkForm: function checkForm(e) {
+      if (this.title && this.title.length <= 255 && this.author.length <= 255 && this.publisher.length <= 255 && this.year.length <= 255 && this.comment.length <= 2000) {
+        return true;
+      }
+      this.errors = [];
+      if (!this.title || this.title.length > 255) {
+        this.errors[0] = 'タイトルは1文字以上255文字以下で入力してください';
+      }
+      if (this.author.length > 255) {
+        this.errors[1] = '著者名は255文字以下で入力してください。';
+      }
+      if (this.publisher.length > 255) {
+        this.errors[2] = '出版社は255文字以下で入力してください。';
+      }
+      if (this.year.length > 255) {
+        this.errors[3] = '出版年は255文字以下で入力してください。';
+      }
+      if (this.comment.length > 2000) {
+        this.errors[4] = 'コメントは2000文字以下で入力してください。';
+      }
+      e.preventDefault();
+    },
+    checkForm_unread: function checkForm_unread(e) {
+      if (this.unread_title && this.unread_title.length <= 255 && this.unread_author.length <= 255) {
+        return true;
+      }
+      this.errors = [];
+      if (!this.unread_title || this.unread_title.length > 255) {
+        this.errors[0] = 'タイトルは1文字以上255文字以下で入力してください';
+      }
+      if (this.unread_author.length > 255) {
+        this.errors[1] = '著者名は255文字以下で入力してください。';
+      }
+      e.preventDefault();
     }
   }
 });

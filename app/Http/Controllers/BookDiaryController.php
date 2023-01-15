@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Services\Calender;
@@ -133,7 +134,7 @@ class BookDiaryController extends Controller
         return view('home', $param);
     }
 
-    public function registBook(Request $request){
+    public function registBook(BookRequest $request){
         $user_id = Auth::user()->id;
         $form = [
             'user_id' => $user_id,
