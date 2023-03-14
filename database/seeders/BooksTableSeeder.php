@@ -22,7 +22,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '文藝春秋',
             'published_year' => '2002',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2022-12-01',
+            'read_date' => '2023-02-01',
         ];
         Book::create($param);
 
@@ -34,7 +34,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '早川書房',
             'published_year' => '2013',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2022-12-07',
+            'read_date' => '2023-02-07',
         ];
         Book::create($param);
 
@@ -46,7 +46,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '角川',
             'published_year' => '2019',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2022-12-08',
+            'read_date' => '2023-02-08',
         ];
         Book::create($param);
 
@@ -58,7 +58,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '東洋経済新報社',
             'published_year' => '2022',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2022-12-12',
+            'read_date' => '2023-02-12',
         ];
         Book::create($param);
 
@@ -70,7 +70,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => 'インプレス',
             'published_year' => '2018',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2022-12-13',
+            'read_date' => '2023-02-13',
         ];
         Book::create($param);
 
@@ -82,7 +82,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '東京創元社',
             'published_year' => '2013',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-05',
+            'read_date' => '2023-03-05',
         ];
         Book::create($param);
 
@@ -94,7 +94,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => 'マイナビ出版',
             'published_year' => '2018',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-06',
+            'read_date' => '2023-03-06',
         ];
         Book::create($param);
 
@@ -106,7 +106,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '文藝春秋',
             'published_year' => '2017',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-12',
+            'read_date' => '2023-03-12',
         ];
         Book::create($param);
 
@@ -118,7 +118,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '翔泳社',
             'published_year' => '2019',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-17',
+            'read_date' => '2023-03-17',
         ];
         Book::create($param);
 
@@ -130,7 +130,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '早川書房',
             'published_year' => '2014',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-19',
+            'read_date' => '2023-03-19',
         ];
         Book::create($param);
 
@@ -142,7 +142,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '辰巳出版',
             'published_year' => '2017',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-19',
+            'read_date' => '2023-03-19',
         ];
         Book::create($param);
 
@@ -154,7 +154,7 @@ class BooksTableSeeder extends Seeder
             'publisher' => '西東社',
             'published_year' => '2019',
             'comment' => 'テキストが入ります。',
-            'read_date' => '2023-01-23',
+            'read_date' => '2023-03-23',
         ];
         Book::create($param);
     }
